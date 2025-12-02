@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="referrer" content="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Web音乐播放器</title>
+<link rel="stylesheet" href="./css/audio.css" />
+</head>
+<body>
+
+<!-- 学生信息 -->
+<div class="student-info">
+    学号：25216950232 &nbsp;|&nbsp; 姓名：杨木霖
+</div>
+
+<!-- 上半部分：唱片与信息 -->
+<div class="upper-container">
+  <div class="record-container">
+    <div class="record-bg">
+      <div class="record-img"></div>
+    </div>
+  </div>
+  <div class="introduction-container">
+    <div class="music-title">加载中...</div>
+    <div class="author-container">
+      歌手：<span class="author-name">...</span>
+    </div>
+  </div>
+</div>
+
+<!-- 下半部分：控件导航栏 -->
+<div class="bottom-container">
+  <!-- 进度条 -->
+  <div class="progress">
+    <div class="progress-inner"></div>
+  </div>
+
+  <!-- 按钮区域 -->
+  <div class="controls">
+    <div class="left">
+      <span class="played-time">00:00</span>&nbsp;/&nbsp;<span class="audio-time">00:00</span>
+    </div>
+    <div class="center">
+      <div id="playMode" class="center-icon" title="列表循环"></div>
+      <div id="before-music" class="center-icon" title="上一首"></div>
+      <div id="playPause" class="center-icon" title="播放/暂停"></div>
+      <div id="last-music" class="center-icon" title="下一首"></div>
+      <div id="volumn" class="center-icon"></div>
+      <input type="range" id="volumn-togger" value="70" min="0" max="100" step="1" />
+    </div>
+    <div class="right">
+      <div id="upload" class="bottom-icon" title="上传本地MP3"></div>
+      <input type="file" id="file-input" accept="audio/*" style="display: none;" />
+      <div id="MV" class="bottom-icon" title="MV(暂无)"></div>
+      <div id="speed" title="倍速">1.0X</div>
+      <!-- 列表按钮 -->
+      <div id="list" class="bottom-icon" title="播放列表"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 播放列表侧边栏 (放在最后) ========== -->
+<div class="playlist-sidebar">
+  <div class="playlist-header">
+    <h3>播放列表</h3>
+    <span id="close-list">✕</span>
+  </div>
+  <ul class="playlist-ul">
+    <!-- JS 自动填充 -->
+  </ul>
+</div>
+
+<script src="./js/audio.js"></script>
+</body>
+</html>
